@@ -1,5 +1,5 @@
 module "dynamo_db" {
-	source							= "../../module-dynamo-db/src"
+	source							= "github.com/breno-hof/module-dynamo-db//src?ref=1.0.0"
 
 	name							= local.name
 	hash_key						= local.partition_key.name
