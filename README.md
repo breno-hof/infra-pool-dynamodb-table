@@ -1,1 +1,1 @@
-# infra-pool-registry-table
+# infra-pool-table
