@@ -4,8 +4,8 @@ module "dynamo_db" {
 	name							= local.name
 	hash_key						= local.partition_key.name
 	hash_key_type					= local.partition_key.type
-	range_key						= local.sort_key.name
-	range_key_type					= local.sort_key.type
+	# range_key						= local.sort_key.name
+	# range_key_type				= local.sort_key.type
 	is_billing_mode_pay_per_request = true
 	is_ttl_enabled					= true
 	is_stream_enabled 				= true
@@ -25,11 +25,11 @@ module "dynamo_db" {
 		projection_type				= "KEYS_ONLY"
 	} ]
 
-	local_secondary_index = [ {
-		index_name 					= "record_type_local_index"
-		range_key 					= local.sort_key.name
-		projection_type				= "ALL"
-	} ]
+	# local_secondary_index = [ {
+	# 	index_name 					= "record_type_local_index"
+	# 	range_key 					= local.sort_key.name
+	# 	projection_type				= "ALL"
+	# } ]
 
 	# replica = [ {
 	# 	region_name = "sa-east-1"
