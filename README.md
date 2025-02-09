@@ -1,1 +1,1 @@
-# infra-pool-table
+# infra-pool-dynamodb-table
